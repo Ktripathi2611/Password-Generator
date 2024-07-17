@@ -1,30 +1,31 @@
-body{
+body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #f2f2f2;
+    background-color: #e0e0e0; /* Light gray background */
     text-align: center;
-}
-.container{
-    
+  }
+  
+  .container {
     max-width: 400px;
-    margin: 0 auto;padding: 20px;
-    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White container */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h1{
+  }
+  
+  h1 {
     text-align: center;
     margin: 2px;
-    color: #333;
-}
-
-label{
+    color: #0095ff; /* Blue heading */
+  }
+  
+  label {
     display: flex;
     align-items: center;
-    margin: 10px,0;
-}
-
-#password {
+    margin: 10px 0;
+  }
+  
+  #password {
     margin-top: 20px;
     font-size: 25px;
     text-align: center;
@@ -32,46 +33,48 @@ label{
     border-radius: 5px;
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#generate{
+  }
+  
+  #generate {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #388e3c; /* Green generate button */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-#generate:hover{
-    background-color: #0056b3;
-}
-#copy{
+  }
+  
+  #generate:hover {
+    background-color: #2e7d31; /* Darker green on hover */
+  }
+  
+  #copy {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff9500; /* Orange copy button */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
-}
-#copy:hover{
-    background-color: #0056b3;
-}
-
-#reset{
+  }
+  
+  #copy:hover {
+    background-color: #e88100; /* Darker orange on hover */
+  }
+  
+  #reset {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff4500; /* Red reset button */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
-}
-#reset:hover{
-    background-color: #0056b3;
-}
+  }
+  
+  #reset:hover {
+    background-color: #e83100; /* Darker red on hover */
+  }
+  
