@@ -1,3 +1,4 @@
+// Character sets for password generation
 const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
 const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const numbers = '0123456789';
@@ -10,8 +11,14 @@ function getRandomCharacter(charSet) {
 
 // Function to generate a password based on user selections
 function generatePassword() {
-  const length = document.getElementById('length').value;
+  const length = parseInt(document.getElementById('length').value, 10);
   let characters = '';
+
+  // Get checkbox elements
+  const lowercaseEl = document.getElementById('lowercase');
+  const uppercaseEl = document.getElementById('uppercase');
+  const numbersEl = document.getElementById('numbers');
+  const symbolsEl = document.getElementById('symbols');
 
   // Check which character types are included
   if (lowercaseEl.checked) {
@@ -33,6 +40,12 @@ function generatePassword() {
     return; // Exit function if no types are chosen
   }
 
+  // Ensure length is a valid number
+  if (isNaN(length) || length < 8 || length > 32) {
+    alert("Please enter a valid length between 8 and 32.");
+    return;
+  }
+
   let password = '';
   for (let i = 0; i < length; i++) {
     password += getRandomCharacter(characters);
@@ -45,20 +58,20 @@ function generatePassword() {
 const generateEl = document.getElementById('generate');
 generateEl.addEventListener('click', generatePassword);
 
-// Optional: Event listener for the reset button (assuming a button with ID "reset" exists)
+// Event listener for the reset button
 const resetEl = document.getElementById('reset');
 if (resetEl) {
   resetEl.addEventListener('click', function() {
     document.getElementById('password').value = '';
     document.getElementById('length').value = 10; // Reset length to default
-    lowercaseEl.checked = true; // Reset checkboxes (optional)
-    uppercaseEl.checked = true;
-    numbersEl.checked = true;
-    symbolsEl.checked = false; // Optional default for symbols
+    document.getElementById('lowercase').checked = true; // Reset checkboxes
+    document.getElementById('uppercase').checked = true;
+    document.getElementById('numbers').checked = true;
+    document.getElementById('symbols').checked = false; // Optional default for symbols
   });
 }
 
-// Optional: Event listener for the copy button (assuming a button with ID "copy" exists)
+// Event listener for the copy button
 const copyEl = document.getElementById('copy');
 if (copyEl) {
   copyEl.addEventListener('click', function() {
@@ -69,7 +82,7 @@ if (copyEl) {
     }
     navigator.clipboard.writeText(password).then(() => {
       alert("Password copied to clipboard!");
-    }, (err) => {
+    }).catch((err) => {
       alert("Failed to copy password: " + err);
     });
   });

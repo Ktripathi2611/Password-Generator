@@ -1,80 +1,87 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #e0e0e0; /* Light gray background */
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff; /* White container */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    margin: 2px;
-    color: #0095ff; /* Blue heading */
-  }
-  
-  label {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-  }
-  
-  #password {
-    margin-top: 20px;
-    font-size: 25px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  #generate {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #388e3c; /* Green generate button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #generate:hover {
-    background-color: #2e7d31; /* Darker green on hover */
-  }
-  
-  #copy {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff9500; /* Orange copy button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #copy:hover {
-    background-color: #e88100; /* Darker orange on hover */
-  }
-  
-  #reset {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff4500; /* Red reset button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #reset:hover {
-    background-color: #e83100; /* Darker red on hover */
-  }
-  
+  font-family: 'Arial', sans-serif; /* Changed to a more modern font */
+  background-color: #f5f5f5; /* Slightly lighter gray background for better contrast */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 20px auto; /* Added some margin for spacing */
+  padding: 20px;
+  background-color: #fff; /* White container */
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+}
+
+h1 {
+  color: #007bff; /* Changed to a slightly different shade of blue */
+  margin-bottom: 20px; /* Increased space below heading */
+}
+
+label {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  margin: 10px 0;
+  font-size: 16px; /* Increased font size for better readability */
+}
+
+input[type="number"],
+input[type="text"] {
+  width: calc(100% - 22px); /* Adjusted width to account for padding */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; /* Space between checkbox and label text */
+}
+
+button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px; /* Consistent font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:focus {
+  outline: 2px solid #007bff; /* Focus state for accessibility */
+}
+
+#generate {
+  background-color: #28a745; /* Updated green for better contrast */
+  color: #fff;
+}
+
+#generate:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+#copy {
+  background-color: #ff5722; /* Updated orange for better contrast */
+  color: #fff;
+}
+
+#copy:hover {
+  background-color: #e64a19; /* Darker orange on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+#reset {
+  background-color: #dc3545; /* Updated red for better contrast */
+  color: #fff;
+}
+
+#reset:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
